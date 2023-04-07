@@ -11,7 +11,7 @@ This makes it easy to install projects from the ActiveState platform during a Gi
 | version  | string  | latest  | Version of the State Tool CLI to install  | false  |
 | channel  | string  | release  | Channel to download the State Tool CLI from  | false  |
 | activestate-api-key  | string  |   | API key used to authenticate to the ActiveState platform  | false |
-| opt-in  | string  | true  | Opt-in to unstable state tool commands  | false  |
+| opt-in  | string  | false | Opt-in to unstable state tool commands  | false  |
 
 ## Examples
 

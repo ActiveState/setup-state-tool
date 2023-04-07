@@ -11,7 +11,7 @@ inputs:
   opt-in:
     description: "Flag to opt-in to unstable features"
     required: false
-    default: "true"
+    default: "false"
   activestate-api-key:
     description: "API key used to authenticate to the ActiveState platform"
     required: false
@@ -48,7 +48,7 @@ runs:
       }
       $CHANNEL = "${{ inputs.channel }}"
       $installArgs = "${installArgs}-b $CHANNEL"
-      (New-Object Net.WebClient).DownloadFile("https://platform.activestate.com/dl/cli/install.ps1", "install.ps1"); 
+      (New-Object Net.WebClient).DownloadFile("https://platform.activestate.com/dl/cli/install.ps1", "install.ps1");
       Invoke-Expression -Command ".\install.ps1 -n $installArgs"
       echo "$env:LOCALAPPDATA\ActiveState\StateTool\$CHANNEL\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
       if ( "${{ inputs.activestate-api-key }}" )
