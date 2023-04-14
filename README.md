@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: gscho/setup-state-tool@v1
+    - uses: ActiveState/setup-state-tool@v1
     - name: run help command
       run: state --help
 ```
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: gscho/setup-state-tool@v1
+    - uses: ActiveState/setup-state-tool@v1
       with:
         activestate-api-key: foobar
         channel: beta
